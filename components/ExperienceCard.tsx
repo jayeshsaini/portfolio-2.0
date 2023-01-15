@@ -34,10 +34,10 @@ function ExperienceCard({ experience }: Props) {
           ))}
         </div>
         <p className="uppercase py-5 text-gray-300">
-          {moment(experience.dateStarted).format("DD-MM-YYYY")} -{" "}
+          {moment(experience.dateStarted).format("DD/MM/YYYY")} -{" "}
           {experience.isCurrentlyWorkingHere
             ? "Present"
-            : moment(experience.dateEnded).format("DD-MM-YYYY")}
+            : moment(experience.dateEnded).format("DD/MM/YYYY")}
         </p>
 
         <ul className="list-disc space-y-4 ml-5 text-lg max-h-96 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80 pr-5">
