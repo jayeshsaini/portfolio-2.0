@@ -47,6 +47,7 @@ function Projects({ projects }: Props) {
                 <Link
                   className="hover:underline decoration-[#F7AB0A]/80 cursor-pointer text-[#F7AB0A]/100 hover:text-white"
                   href={`${project?.linkToBuild}`}
+                  target="_blank"
                 >
                   {project?.title}
                 </Link>
