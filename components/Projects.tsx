@@ -8,7 +8,6 @@ type Props = {
 };
 
 function Projects({ projects }: Props) {
-  // const projects = [1, 2, 3, 4, 5];
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -34,7 +33,7 @@ function Projects({ projects }: Props) {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="h-5/6 pt-5"
+              className="lg:h-5/6 pt-5 md:h-3/6"
               src={urlFor(project?.image).url()}
               alt=""
             />

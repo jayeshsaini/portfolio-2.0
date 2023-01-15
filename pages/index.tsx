@@ -8,6 +8,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
 import Link from "next/link";
+import { urlFor } from "../sanity";
 import { GetStaticProps } from "next";
 import { Experience, PageInfo, Project, Skill, Social } from "../typings";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
@@ -69,8 +70,8 @@ export default function Home({
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
             <img
-              className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
-              src="https://i.imgur.com/e2yvD6A.png"
+              className="h-10 w-10 rounded-full filter grayscale opacity-50 hover:grayscale-0 hover:opacity-100 cursor-pointer"
+              src={urlFor(pageInfo?.heroImage).url()}
               alt=""
             />
           </div>
