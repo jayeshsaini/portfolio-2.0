@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Project } from "../typings";
 import { urlFor } from "../sanity";
+import Link from "next/link";
 
 type Props = {
   projects: Project[];
@@ -43,7 +44,12 @@ function Projects({ projects }: Props) {
                 <span className="underline decoration-[#F7AB0A]/50">
                   Case Study {i + 1} of {projects.length}:
                 </span>{" "}
-                {project?.title}
+                <Link
+                  className="hover:underline decoration-[#F7AB0A]/80 cursor-pointer text-[#F7AB0A]/100 hover:text-white"
+                  href={`${project?.linkToBuild}`}
+                >
+                  {project?.title}
+                </Link>
               </h4>
 
               <div className="flex items-center space-x-5 justify-center">
